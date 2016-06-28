@@ -1,0 +1,30 @@
+{
+  "name": "ant.design.agent",
+  "version": "0.0.1",
+  "description": "get a copy of ant.design to local UI design",
+  "main": "index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "install": "git clone -b gh-pages https://github.com/ant-design/ant-design & npm install f2e-server -g",
+    "start": "f2eserver start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shy2850/ant.design.git"
+  },
+  "keywords": [
+    "antd"
+  ],
+  "author": "shy2850",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shy2850/ant.degin.agent/issues"
+  },
+  "homepage": "https://github.com/shy2850/ant.degin.agent#readme",
+  "dependencies": {
+    "antd": "^1.6.2",
+    "less": "^2.7.1"
+  }
+}

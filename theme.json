@@ -1,0 +1,50 @@
+{
+    "primary-color": {
+        "name": "基色",
+        "value": "#464068"
+    },
+    "link-color": {
+        "name": "链接色",
+        "value": "#464068"
+    },
+    "info-color": {
+        "name": "信息色",
+        "value": "#464068"
+    },
+    "success-color": {
+        "name": "成功色",
+        "value": "#81b536"
+    },
+    "error-color": {
+        "name": "失败色",
+        "value": "#ff6f80"
+    },
+    "warning-color": {
+        "name": "警告色",
+        "value": "#f5a623"
+    },
+    "body-background": {
+        "name": "body色",
+        "value": "#fff"
+    },
+    "text-color": {
+        "name": "文本色",
+        "value": "#666"
+    },
+    "font-size-base": {
+        "name": "字体大小",
+        "value": "12px"
+    },
+    "line-height-base": {
+        "name": "行高",
+        "value": 1.5
+    },
+    "border-radius-base" : {
+        "name": "大圆角",
+        "value": "6px"
+    },
+    "border-radius-sm" : {
+        "name": "小圆角",
+        "value": "4px"
+    }
+}
