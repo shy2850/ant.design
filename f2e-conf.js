@@ -2,6 +2,7 @@ exports.localhost = {
     root: __dirname,
     welcome: 'index.html',
     port: 8899,
+    gzip: true,
     cdn: true,
     filter: {
         get: function (req, resp) {
