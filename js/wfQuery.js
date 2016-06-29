@@ -1,1 +1,1 @@
-$include['../node_modules/wfquery/wfQuery.js']
+$include["../node_modules/wfquery/wfQuery.js"]

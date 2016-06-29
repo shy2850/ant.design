@@ -1,133 +1,161 @@
 {
     "primary-color": {
         "name": "基色",
+        "pinyin": "jise",
         "type": "color",
         "value": "#6D77B8"
     },
     "link-color": {
         "name": "链接色",
+        "pinyin": "lianjiese",
         "type": "color",
         "value": "#6D77B8"
     },
     "info-color": {
         "name": "信息色",
+        "pinyin": "xinxise",
         "type": "color",
         "value": "#666666"
     },
     "success-color": {
         "name": "成功色",
+        "pinyin": "chenggongse",
         "type": "color",
         "value": "#81B536"
     },
     "error-color": {
         "name": "失败色",
+        "pinyin": "shibaise",
         "type": "color",
         "value": "#FF6F80"
     },
     "warning-color": {
         "name": "警告色",
+        "pinyin": "jingaose",
         "type": "color",
         "value": "#F5A623"
     },
     "body-background": {
         "name": "body色",
+        "pinyin": "bodyse",
         "type": "color",
         "value": "#000"
     },
     "text-color": {
         "name": "文本色",
+        "pinyin": "wenbense",
         "type": "color",
         "value": "#4a4a4a"
     },
     "font-size-base": {
         "name": "字体大小",
+        "pinyin": "zitidaxiao",
         "value": "12px"
     },
     "line-height-base": {
         "name": "行高",
+        "pinyin": "hanggao",
         "value": "1.5"
     },
     "border-radius-base": {
         "name": "大圆角",
+        "pinyin": "dayuanjiao",
         "value": "2px"
     },
     "border-radius-sm": {
         "name": "小圆角",
+        "pinyin": "xiaoyuanjiao",
         "value": "0px"
     },
     "border-color-base": {
         "name": "边框",
+        "pinyin": "biankuang",
         "type": "color",
         "value": "#D6D6D6"
     },
     "border-color-split": {
         "name": "分割线",
+        "pinyin": "fengexian",
         "type": "color",
         "value": "#B8B8B8"
     },
     "shadow-color": {
         "name": "阴影",
+        "pinyin": "yinying",
         "value": "rgba(100, 100, 100, .2)"
     },
     "btn-primary-color": {
         "name": "基色按钮文字",
+        "pinyin": "jiseanniuwenzi",
         "type": "color",
         "value": "#fff"
     },
     "btn-disable-color": {
         "name": "禁用按钮文字",
+        "pinyin": "jinyonganniuwenzi",
         "type": "color",
         "value": "#ccc"
     },
     "btn-disable-bg": {
         "name": "禁用按钮背景",
+        "pinyin": "jinyonganniubeijing",
         "type": "color",
         "value": "#EDEDF0"
     },
     "label-required-color": {
         "name": "必填*颜色",
+        "pinyin": "bitianyanse",
         "type": "color",
         "value": "#81B536"
     },
     "label-color": {
         "name": "Label",
+        "pinyin": "label",
         "type": "color",
         "value": "#999999"
     },
     "input-placeholder-color": {
         "name": "Placeholder",
+        "pinyin": "placeholder",
         "type": "color",
         "value": "#4a4a4a"
     },
     "input-height-base": {
         "name": "输入框高度(中)",
+        "pinyin": "shurukuanggaodu",
         "value": "30px"
     },
     "input-height-lg": {
         "name": "输入框高度(大)",
+        "pinyin": "shurukuanggaodu",
         "value": "40px"
     },
     "input-height-sm": {
         "name": "输入框高度(小)",
+        "pinyin": "shurukuanggaodu",
         "value": "22px"
     },
     "input-color": {
         "name": "输入框文字颜色",
+        "pinyin": "shurukuangwenziyanse",
         "type": "color",
         "value": "#4a4a4a"
     },
     "input-bg": {
         "name": "输入框背景颜色",
+        "pinyin": "shurukuangbeijingyanse",
         "type": "color",
         "value": "#fff"
     },
     "input-disabled-bg": {
         "name": "输入框不可用背景",
+        "pinyin": "shurukuangbukeyongbeijing",
         "type": "color",
         "value": "#81B536"
     },
     "form-item-margin-bottom": {
         "name": "表单元素行间隔",
+        "pinyin": "biaodanyuansuhangjianju",
         "value": "24px"
     }
 }

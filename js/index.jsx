@@ -45,18 +45,19 @@ class MyToolBar extends React.Component {
     }
     render() {
         let theme = this.props.theme;
+        let filter = this.state ? this.state.filter : '';
         let keys = Object.keys(theme);
-
         return (
             <div>
-                <Input size="large" placeholder="输入中文名称检索" onChange={this.filter}/>
+                <Input size="large" placeholder="输入中文、英文或拼音检索" onChange={this.filter.bind(this)}/>
                 <Form horizontal>
                     {keys.map((name) => {
-                    return (
-                        <FormItem>
-                          <Input addonBefore={theme[name].name} name={name} defaultValue={theme[name].value}/>
-                        </FormItem>
-                    );
+                        let t = theme[name];
+                        return (!filter || ~name.indexOf(filter) || ~t.name.indexOf(filter) || ~t.pinyin.indexOf(filter)) ? (
+                            <FormItem>
+                              <Input addonBefore={theme[name].name} name={name} defaultValue={theme[name].value}/>
+                            </FormItem>
+                        ) : '';
                     })}
                 </Form>
             </div>
