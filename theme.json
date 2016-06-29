@@ -39,12 +39,12 @@
         "name": "行高",
         "value": 1.5
     },
-    "border-radius-base" : {
+    "border-radius-base": {
         "name": "大圆角",
-        "value": "6px"
+        "value": "2px"
     },
-    "border-radius-sm" : {
+    "border-radius-sm": {
         "name": "小圆角",
-        "value": "4px"
+        "value": "2px"
     }
 }

@@ -1,38 +1,64 @@
+.my-tools-bar {
+    position: fixed;
+    right: 0;
+    bottom: 20px;
+    width: 200px;
+    form {
+        overflow-y: auto;
+        height: 400px;
+    }
+    .ant-form-item {
+        margin-bottom: 2px;
+    }
+}
 <%  
-    return function () {
-        var fs = require('fs');
-        var zlib = require('zlib');
-        var path = require('path');
-        var conf = request.util.conf;
-        var root = conf.root;
-        var theme = require(path.join(root, 'theme.json'));
-        
-        conf.allVars = conf.allVars || fs.readFileSync('node_modules/antd/lib/style/themes/default.less').toString().split(/\n+/);
-        conf.indexExt = conf.indexExt || fs.readFileSync('ant-design/index.css').toString().match(/(\.ant-progress\{.*?)$/)[1];
+    var fs = require('fs');
+    var zlib = require('zlib');
+    var path = require('path');
+    var conf = request.util.conf;
+    var root = conf.root;
+    var themeUrl = path.join(root, 'theme.json');
+    var theme = JSON.parse(fs.readFileSync(themeUrl).toString());
 
-        var lessVars = conf.allVars.map(function (line) {
-            var key = line.match(/^@([^:\s]+)/);
-            if (key && theme[key[1]]) {
-                return line.replace(/:(.*?);$/, ': ' + theme[key[1]].value + ';');
+    if (request.post) {
+        for (name in request.post) {
+            if (request.post[name] && theme[name]) {
+                theme[name].value = request.post[name];
             }
-            else {
-                return line;
-            }
-        }).join('\n');
+        }
+        fs.writeFileSync(themeUrl, JSON.stringify(theme, null, 4), 'utf-8');
+        __p = '{success: true}';
+    }
+    else {
+        return function () {
+            
+            conf.allVars = conf.allVars || fs.readFileSync('node_modules/antd/lib/style/themes/default.less').toString().split(/\n+/);
+            conf.indexExt = conf.indexExt || fs.readFileSync('ant-design/index.css').toString().match(/(\.ant-progress\{.*?)$/)[1];
 
-        fs.writeFileSync('node_modules/antd/lib/style/themes/default.less', 
-            '\n' + lessVars, 'utf-8');
+            var lessVars = conf.allVars.map(function (line) {
+                var key = line.match(/^@([^:\s]+)/);
+                if (key && theme[key[1]]) {
+                    return line.replace(/:(.*?);$/, ': ' + theme[key[1]].value + ';');
+                }
+                else {
+                    return line;
+                }
+            }).join('\n');
 
-        var text = '@import "./node_modules/antd/lib/style/themes/default.less";'
-            +'\n@import "./node_modules/antd/lib/style/index.less";'
-            +'\n@import "./node_modules/antd/lib/style/components.less";';
+            fs.writeFileSync('node_modules/antd/lib/style/themes/default.less', 
+                '\n' + lessVars, 'utf-8');
+
+            var text = '@import "./node_modules/antd/lib/style/themes/default.less";'
+                +'\n@import "./node_modules/antd/lib/style/index.less";'
+                +'\n@import "./node_modules/antd/lib/style/components.less";';
 
 
-        require("less").render(text, {
-            paths: [ root ]
-        }, function (err, output) {
-            var str = conf.indexExt.replace(/#2db7f5/g, theme['primary-color'].value) + output.css;
-            response.end(response.gzip ? zlib.gzipSync(str) : str);
-        });
-    };
+            require("less").render(text + __p, {
+                paths: [ root ]
+            }, function (err, output) {
+                var str = conf.indexExt.replace(/#2db7f5/g, theme['primary-color'].value) + output.css;
+                response.end(response.gzip ? zlib.gzipSync(str) : str);
+            });
+        };
+    }
 %>

@@ -3,11 +3,15 @@ exports.localhost = {
     welcome: 'index.html',
     port: 8899,
     gzip: true,
-    cdn: true,
+    babel: {
+        only: '*.jsx',
+        plugins: ["transform-es2015-modules-umd"],
+        presets: ['react', 'es2015']
+    },
     filter: {
         get: function (req, resp) {
             if (req.url.match(/^[^\.]+$/)) {
-                req.url = '/ant-design/index.html';
+                req.url = '/index.html';
             }
         }
     },

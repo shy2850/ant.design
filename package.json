@@ -25,6 +25,10 @@
   "homepage": "https://github.com/shy2850/ant.degin.agent#readme",
   "dependencies": {
     "antd": "^1.6.2",
-    "less": "^2.7.1"
+    "babel-plugin-transform-es2015-modules-umd": "^6.8.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "less": "^2.7.1",
+    "wfquery": "^0.6.0"
   }
 }
