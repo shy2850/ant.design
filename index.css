@@ -5,9 +5,12 @@
     width: 200px;
     form {
         overflow-y: auto;
-        height: 400px;
+        height: 480px;
     }
     .ant-form-item {
+        margin-bottom: 0;
+    }
+    .ant-input-wrapper input{
         margin-bottom: 2px;
     }
 }
@@ -39,7 +42,6 @@
                 var key = line.match(/^@([^:\s]+)\s*\:/);
                 if (key && theme[key[1]]) {
                     var str = line.replace(/:(.*?)$/, ': ' + theme[key[1]].value + ';');
-                    console.log(str);
                     return str;
                 }
                 else {

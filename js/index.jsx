@@ -14,7 +14,7 @@ let cssHref = link.attr('href');
 let holder = $('<div class="my-tools-bar"></div>');
 $(document.body).append(holder);
 
-holder.on('change', 'input', (e) => {
+holder.on('change', '.ant-form-item input', (e) => {
     let t = e.target;
     let data = {};
     data[t.name] = t.value;
@@ -34,20 +34,41 @@ holder.on('change', 'input', (e) => {
     })
 });
 
+class MyToolBar extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    filter(e) {
+        this.setState({
+            filter: e.target.value
+        });
+    }
+    render() {
+        let theme = this.props.theme;
+        let keys = Object.keys(theme);
+
+        return (
+            <div>
+                <Input size="large" placeholder="输入中文名称检索" onChange={this.filter}/>
+                <Form horizontal>
+                    {keys.map((name) => {
+                    return (
+                        <FormItem>
+                          <Input addonBefore={theme[name].name} name={name} defaultValue={theme[name].value}/>
+                        </FormItem>
+                    );
+                    })}
+                </Form>
+            </div>
+        );
+    }
+}
+
 $.ajax({
     url: '/theme.json',
     success: (theme) => {
-        let keys = Object.keys(theme);
         ReactDOM.render(
-        <Form horizontal>
-            {keys.map((name) => {
-            return (
-                <FormItem>
-                  <Input addonBefore={theme[name].name} name={name} defaultValue={theme[name].value}/>
-                </FormItem>
-            );
-            })}
-        </Form>
+            <MyToolBar theme={theme}/>
         , holder[0]);
     }
 });
