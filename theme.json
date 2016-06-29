@@ -1,43 +1,51 @@
 {
     "primary-color": {
         "name": "基色",
+        "type": "color",
         "value": "#464068"
     },
     "link-color": {
         "name": "链接色",
+        "type": "color",
         "value": "#464068"
     },
     "info-color": {
         "name": "信息色",
+        "type": "color",
         "value": "#464068"
     },
     "success-color": {
         "name": "成功色",
+        "type": "color",
         "value": "#81b536"
     },
     "error-color": {
         "name": "失败色",
+        "type": "color",
         "value": "#ff6f80"
     },
     "warning-color": {
         "name": "警告色",
+        "type": "color",
         "value": "#f5a623"
     },
     "body-background": {
         "name": "body色",
-        "value": "#fff"
+        "type": "color",
+        "value": "#000"
     },
     "text-color": {
         "name": "文本色",
-        "value": "#666"
+        "type": "color",
+        "value": "#4a4a4a"
     },
     "font-size-base": {
         "name": "字体大小",
-        "value": "12px"
+        "value": "14px"
     },
     "line-height-base": {
         "name": "行高",
-        "value": 1.5
+        "value": "1.5"
     },
     "border-radius-base": {
         "name": "大圆角",
@@ -45,6 +53,81 @@
     },
     "border-radius-sm": {
         "name": "小圆角",
-        "value": "2px"
+        "value": "0px"
+    },
+    "border-color-base": {
+        "name": "边框",
+        "type": "color",
+        "value": "#d9d9d9"
+    },
+    "border-color-split": {
+        "name": "分割线",
+        "type": "color",
+        "value": "#e9e9e9"
+    },
+    "shadow-color": {
+        "name": "阴影",
+        "value": "rgba(100, 100, 100, .2)"
+    },
+    "btn-primary-color": {
+        "name": "基色按钮文字",
+        "type": "color",
+        "value": "#fff"
+    },
+    "btn-disable-color": {
+        "name": "禁用按钮文字",
+        "type": "color",
+        "value": "#ccc"
+    },
+    "btn-disable-bg": {
+        "name": "禁用按钮背景",
+        "type": "color",
+        "value": "#f7f7f7"
+    },
+    "label-required-color": {
+        "name": "必填*颜色",
+        "type": "color",
+        "value": "#f50"
+    },
+    "label-color": {
+        "name": "Label",
+        "type": "color",
+        "value": "#4a4a4a"
+    },
+    "input-placeholder-color": {
+        "name": "Placeholder",
+        "type": "color",
+        "value": "#4a4a4a"
+    },
+    "input-height-base": {
+        "name": "输入框高度(中)",
+        "value": "28px"
+    },
+    "input-height-lg": {
+        "name": "输入框高度(大)",
+        "value": "32px"
+    },
+    "input-height-sm": {
+        "name": "输入框高度(小)",
+        "value": "22px"
+    },
+    "input-color": {
+        "name": "输入框文字颜色",
+        "type": "color",
+        "value": "#4a4a4a"
+    },
+    "input-bg": {
+        "name": "输入框背景颜色",
+        "type": "color",
+        "value": "#fff"
+    },
+    "input-disabled-bg": {
+        "name": "输入框不可用背景",
+        "type": "color",
+        "value": "#f7f7f7"
+    },
+    "form-item-margin-bottom": {
+        "name": "表单元素行间隔",
+        "value": "24px"
     }
 }
