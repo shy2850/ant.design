@@ -2,32 +2,32 @@
     "primary-color": {
         "name": "基色",
         "type": "color",
-        "value": "#464068"
+        "value": "#6D77B8"
     },
     "link-color": {
         "name": "链接色",
         "type": "color",
-        "value": "#464068"
+        "value": "#6D77B8"
     },
     "info-color": {
         "name": "信息色",
         "type": "color",
-        "value": "#464068"
+        "value": "#666666"
     },
     "success-color": {
         "name": "成功色",
         "type": "color",
-        "value": "#81b536"
+        "value": "#81B536"
     },
     "error-color": {
         "name": "失败色",
         "type": "color",
-        "value": "#ff6f80"
+        "value": "#FF6F80"
     },
     "warning-color": {
         "name": "警告色",
         "type": "color",
-        "value": "#f5a623"
+        "value": "#F5A623"
     },
     "body-background": {
         "name": "body色",
@@ -41,7 +41,7 @@
     },
     "font-size-base": {
         "name": "字体大小",
-        "value": "14px"
+        "value": "12px"
     },
     "line-height-base": {
         "name": "行高",
@@ -58,12 +58,12 @@
     "border-color-base": {
         "name": "边框",
         "type": "color",
-        "value": "#d9d9d9"
+        "value": "#D6D6D6"
     },
     "border-color-split": {
         "name": "分割线",
         "type": "color",
-        "value": "#e9e9e9"
+        "value": "#B8B8B8"
     },
     "shadow-color": {
         "name": "阴影",
@@ -82,17 +82,17 @@
     "btn-disable-bg": {
         "name": "禁用按钮背景",
         "type": "color",
-        "value": "#f7f7f7"
+        "value": "#EDEDF0"
     },
     "label-required-color": {
         "name": "必填*颜色",
         "type": "color",
-        "value": "#f50"
+        "value": "#81B536"
     },
     "label-color": {
         "name": "Label",
         "type": "color",
-        "value": "#4a4a4a"
+        "value": "#999999"
     },
     "input-placeholder-color": {
         "name": "Placeholder",
@@ -101,11 +101,11 @@
     },
     "input-height-base": {
         "name": "输入框高度(中)",
-        "value": "28px"
+        "value": "30px"
     },
     "input-height-lg": {
         "name": "输入框高度(大)",
-        "value": "32px"
+        "value": "40px"
     },
     "input-height-sm": {
         "name": "输入框高度(小)",
@@ -124,7 +124,7 @@
     "input-disabled-bg": {
         "name": "输入框不可用背景",
         "type": "color",
-        "value": "#f7f7f7"
+        "value": "#81B536"
     },
     "form-item-margin-bottom": {
         "name": "表单元素行间隔",

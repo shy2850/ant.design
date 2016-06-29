@@ -36,9 +36,11 @@
             conf.indexExt = conf.indexExt || fs.readFileSync('ant-design/index.css').toString().match(/(\.ant-progress\{.*?)$/)[1];
 
             var lessVars = conf.allVars.map(function (line) {
-                var key = line.match(/^@([^:\s]+)/);
+                var key = line.match(/^@([^:\s]+)\s*\:/);
                 if (key && theme[key[1]]) {
-                    return line.replace(/:(.*?);$/, ': ' + theme[key[1]].value + ';');
+                    var str = line.replace(/:(.*?)$/, ': ' + theme[key[1]].value + ';');
+                    console.log(str);
+                    return str;
                 }
                 else {
                     return line;
