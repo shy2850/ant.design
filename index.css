@@ -5,7 +5,7 @@
     width: 200px;
     form {
         overflow-y: auto;
-        height: 480px;
+        height: 400px;
     }
     .ant-form-item {
         margin-bottom: 0;
