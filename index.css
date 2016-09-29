@@ -35,8 +35,8 @@
     else {
         return function () {
             
-            conf.allVars = conf.allVars || fs.readFileSync('node_modules/antd/lib/style/themes/default.less').toString().split(/\n+/);
-            conf.indexExt = conf.indexExt || fs.readFileSync('ant-design/index.css').toString().match(/(\.ant-progress\{.*?)$/)[1];
+            conf.allVars = conf.allVars || fs.readFileSync(path.join(root, 'node_modules/antd/lib/style/themes/default.less')).toString().split(/\n+/);
+            conf.indexExt = conf.indexExt || fs.readFileSync(path.join(root, 'ant-design/index.css')).toString().match(/(\.ant-progress\{.*?)$/)[1];
 
             var lessVars = conf.allVars.map(function (line) {
                 var key = line.match(/^@([^:\s]+)\s*\:/);
@@ -49,7 +49,7 @@
                 }
             }).join('\n');
 
-            fs.writeFileSync('node_modules/antd/lib/style/themes/default.less', 
+            fs.writeFileSync(path.join(root, 'node_modules/antd/lib/style/themes/default.less'), 
                 '\n' + lessVars, 'utf-8');
 
             var text = '@import "./node_modules/antd/lib/style/themes/default.less";'
