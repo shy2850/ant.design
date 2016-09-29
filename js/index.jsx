@@ -9,7 +9,7 @@ const {
 
 const FormItem = Form.Item;
 
-let link = $('link[rel="stylesheet"]');
+let link = $('link[rel="stylesheet"][href="/index-2.css"]');
 let cssHref = link.attr('href');
 let holder = $('<div class="my-tools-bar"></div>');
 $(document.body).append(holder);
@@ -19,7 +19,7 @@ holder.on('change', '.ant-form-item input', (e) => {
     let data = {};
     data[t.name] = t.value;
     $.ajax({
-        url: '/index.css',
+        url: '/index-2.css',
         type: 'post',
         dataType: 'text',
         data,
