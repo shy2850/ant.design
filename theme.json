@@ -133,7 +133,7 @@
     "input-height-sm": {
         "name": "输入框高度(小)",
         "pinyin": "shurukuanggaodu",
-        "value": "22px"
+        "value": "24px"
     },
     "input-color": {
         "name": "输入框文字颜色",
